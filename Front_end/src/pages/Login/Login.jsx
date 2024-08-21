@@ -20,7 +20,7 @@ const Login = () => {
   // Use Effect
   useEffect(() => {
     if (token === localStorage.getItem('token')) {
-      ajoutToken(localStorage.getItem('token'));
+      addToken(localStorage.getItem('token'));
     }
   });
 
@@ -31,7 +31,7 @@ const Login = () => {
     login.then((obj) => {
       if (obj.status !== 400) {
         setLoginStatus(obj.status);
-        ajoutToken(obj.token);
+        addToken(obj.token);
       } else {
         setLoginErreur(obj.message);
       }
@@ -45,7 +45,7 @@ const Login = () => {
 
   // Add the token
   const dispatch = useDispatch();
-  const ajoutToken = (token) => {
+  const addToken = (token) => {
     if (remember === true) {
       localStorage.setItem('token', token);
     }
