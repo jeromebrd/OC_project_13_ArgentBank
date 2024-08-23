@@ -275,6 +275,9 @@ body {
   background-color: #00bc77;
   color: #fff;
 }
+#edit-section {
+  display: none;
+}
 
 @media (min-width: 720px) {
   .account {

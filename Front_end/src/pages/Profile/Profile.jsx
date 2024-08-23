@@ -28,7 +28,6 @@ const Profile = () => {
 
   // Edit name
   const handleEdit = () => {
-    document.getElementById('fullName').style.display = 'none';
     document.getElementById('edit-button').style.display = 'none';
     document.getElementById('edit-section').style.display = 'block';
   };
